@@ -10,4 +10,10 @@
         android:layout_centerInParent="true"
         android:text="@string/app_text"
     />
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
 </RelativeLayout>

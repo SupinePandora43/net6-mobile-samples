@@ -4,4 +4,8 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Veldrid" Version="4.8.0" />
+    <PackageReference Include="Veldrid.SPIRV" Version="1.0.14" />
+  </ItemGroup>
 </Project>
