@@ -312,7 +312,7 @@ void main()
             {
                 Console.Error.WriteLine("vk threw an error\nOr device doesn't support Vulkan");
             }
-
+            
             _view = new VeldridSurfaceView(this, backend, options);
             _window = new AndroidApplicationWindow(this, _view);
             _window.GraphicsDeviceCreated += CreateResources;
@@ -380,10 +380,10 @@ void main()
             pipelineDescription.ShaderSet = new ShaderSetDescription(
                 vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
                 shaders: _shaders);
-            pipelineDescription.Outputs = _graphicsDevice.SwapchainFramebuffer.OutputDescription;
+            pipelineDescription.Outputs = swapchain.Framebuffer.OutputDescription;
 
             _pipeline = factory.CreateGraphicsPipeline(pipelineDescription);
-
+            
             _commandList = factory.CreateCommandList();
         }
         private void Draw(float delta)
@@ -413,7 +413,7 @@ void main()
             _graphicsDevice.SubmitCommands(_commandList);
 
             // Once commands have been submitted, the rendered image can be presented to the application window.
-            _graphicsDevice.SwapBuffers();
+            _graphicsDevice.SwapBuffers(swapchain);
         }
         protected override void OnPause()
         {

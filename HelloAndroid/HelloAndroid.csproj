@@ -5,7 +5,12 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Veldrid" Version="4.8.0" />
+    <!--<PackageReference Include="Veldrid" Version="4.9.0-gffcf1cdb33" /> --><!--4.9.0-gffcf1cdb33-->
     <PackageReference Include="Veldrid.SPIRV" Version="1.0.14" />
+    <!--<PackageReference Include="Vk" Version="1.0.25" />-->
+  </ItemGroup>
+  <ItemGroup>
+	  <!-- https://github.com/SupinePandora43/veldrid/tree/net5-IsAndroid -->
+    <ProjectReference Include="..\..\veldrid\src\Veldrid\Veldrid.csproj" />
   </ItemGroup>
 </Project>
